@@ -1,0 +1,52 @@
+body{
+    height: 100vh;
+    background: var(--light);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: background 0.2s linear;
+}
+
+body.dark{
+    background: var(--dark);
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(65px);
+}
+
+.label {
+    padding: 0.5rem 0.5rem;
+
+    display: flex;
+    justify-content: space-between;
+    width: 120px;
+    height: 50px;
+
+    border-radius: 50px;
+    
+    position: relative;
+    background: var(--label);
+}
+
+
+.ball{
+    align-self: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: var(--light);
+
+    position: absolute;
+
+    transition: transform 0.2s linear;
+}
+
